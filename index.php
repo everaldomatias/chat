@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+  include_once( "settings/settings.php" );
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,6 +27,9 @@
     <![endif]-->
   </head>
   <body>
+    <?php if ( $showNome ) : ?>
+      <p>Bem vindo <code><?php echo $nomeAtual; ?></code></p>
+    <?php endif; ?>
 
     <div class="row">
       <div class="col-md-6 col-md-offset-3">

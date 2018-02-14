@@ -11,9 +11,20 @@
 	$banco		= "chat";
 
 	// Iniciando a conexão
-	$conecta = mysql_connect( $host, $usuario, $senha ) OR print( mysql_error() );
-	mysql_select_db( $banco, $conecta );
+	$conecta = mysqli_connect( $host, $usuario, $senha, $banco ) OR print( mysqli_connect_errno() );
 
-	if ( ! $conecta ) {
-		echo "Erro ao se conectar com o banco de dados!";
+	if ( mysqli_connect_errno() ) {
+		echo "Erro ao se conectar com o banco de dados!" . mysqli_connect_errno();
+	}
+
+	// Outras configurações
+	date_default_timezone_set( 'America/Sao_Paulo' );
+	$globalData = date( "d/m/Y" );
+	$globalHora = date( "H:i" );
+	$showNome = false;
+
+	if ( isset( $_SESSION['usuario'] ) && $_SESSION['usuario'] != null ) {
+		$nomeAtual = $_SESSION['nome'];
+		$usuarioAtual = $_SESSION['usuario'];
+		$showNome = true;
 	}
