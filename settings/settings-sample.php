@@ -5,7 +5,7 @@
 	// 
 	// Lembrando que o arquivo que criar não deve ser versionado.
 
-	$post 		= "localhost";
+	$host 		= "localhost";
 	$usuario	= "root";
 	$senha		= "pass";
 	$banco		= "chat";
