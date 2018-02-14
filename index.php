@@ -31,7 +31,7 @@
       <p>Bem vindo <code><?php echo $nomeAtual; ?></code></p>
     <?php endif; ?>
 
-    <div class="row">
+    <div class="col-sm-12 nopadding">
       <div class="col-md-6 col-md-offset-3">
         <?php
           $dir = "paginas/";
