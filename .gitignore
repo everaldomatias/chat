@@ -38,3 +38,4 @@ sftp-config.json
 src/node_modules/*
 settings.php
 settings/settings.php
+pdo.php
